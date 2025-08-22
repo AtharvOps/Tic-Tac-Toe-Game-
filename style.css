@@ -1,0 +1,120 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: linear-gradient(to bottom right,#fff0f5,#ffe4f9);
+  margin-top: 10px;
+  
+}
+
+body{
+animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.title-text{
+  margin-bottom: 30px;
+  font-size: 3rem;
+  font-family: "Arvo", cursive;
+  background: linear-gradient(to right, #fe61af, #ffaf3f);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:3px 3px 6px rgba(0,0,0,0.3);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.title-text {
+  animation: popIn 0.5s ease-out;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #f5f5dc;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid #333;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 3px 3px 12px rgba(30,144,255,0.4);
+}
+
+.cell:hover{
+    transform:scale(1.05);
+    box-shadow: 3px 3px 12px rgba(255,20,147,0.5);
+    transition:all 0.2s ease-in-out;
+}
+
+.cell.x {
+  color: #1e90ff; 
+  text-shadow: 2px 2px 5px rgba(30, 144, 255, 0.5);
+}
+
+.cell.o {
+  color: hsl(0, 96%, 53%);
+  text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.6);
+}
+
+.message{
+  font-family:'Poppins',sans-serif;
+  font-size:26px;
+  font-weight: 600;
+  color:#ff1493;
+  margin-top: 20px;
+  text-shadow: 1px 1px 5px rgba(225,105,180,0.5);
+  text-align:center;
+
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message p {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.message.show {
+  display: flex;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  color: black;
+  background-color: #ffeef3;
+  box-shadow: 3px,3px,3px rgba(225,105,180,0.4);
+  transition: 0.3 sec;
+}
+
+button:hover{
+    background-color: #ffd6ec;
+    box-shadow: 0 0 12px rgba(225,20,147,0.6);
+}
+
